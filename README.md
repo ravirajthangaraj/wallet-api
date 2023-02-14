@@ -11,10 +11,11 @@
 - ```json
     {
         "env": {
-            "PORT": "",  // optional, default is 3000
+            "PORT": 5000,  // optional, default is 3000
             "MONGO_URI": "YOUR MONGO CONNECTION URI", 
             "JWT_KEY": ""
         }
     }
     ```
 - Run ```npm start``` to start the server.
+
