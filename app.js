@@ -20,11 +20,13 @@ app.use(bodyParser.json());
 const userRouter = require('./api/routes/user');
 const accountTypesRouter = require('./api/routes/account-types');
 const accountRouter = require('./api/routes/account');
+const transactionRouter = require('./api/routes/transactions');
 
 // configure api routes here
 app.use('/user', userRouter);
 app.use('/account-types', accountTypesRouter);
 app.use('/accounts', accountRouter);
+app.use('/transaction', transactionRouter);
 
 // this middleware will be used if any above url 
 // configuration does not match with request url
