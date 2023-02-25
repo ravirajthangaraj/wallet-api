@@ -1,4 +1,5 @@
 const express = require('express');
+const cors = require('cors');
 
 const app = express();
 
@@ -12,6 +13,7 @@ mongoose.set('strictQuery', true);
 mongoose.connect(process.env.MONGO_URI);
 
 // for logging the request
+app.use(cors());
 app.use(morgan('dev'));
 app.use(bodyParser.urlencoded({extended: false}));
 app.use(bodyParser.json());
